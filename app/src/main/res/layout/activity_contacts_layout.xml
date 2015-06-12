@@ -1,0 +1,121 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content"
+    tools:context=".ContactsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:fitsSystemWindows="false"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <android.support.v7.widget.CardView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="3dp"
+                    app:contentPadding="6dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_search_grey_500_24dp"
+                        android:paddingLeft="8dp"
+                        android:drawablePadding="32dp"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="#9e9e9e"
+                        android:text="Search"/>
+
+
+                </android.support.v7.widget.CardView>
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="3dp"
+                app:contentPadding="6dp"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:layout_height="32dp"
+                    android:layout_width="32dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:background="@drawable/circular_bg_primary"
+                    android:text="A"/>
+
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="96dp"
+                    android:id="@+id/item_textview"
+                    android:layout_gravity="left|center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#212121"
+                    android:text="Contact A"/>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/primary_color"
+            app:layout_scrollFlags="scroll"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
