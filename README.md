@@ -2,6 +2,8 @@
 
 This is a demo application which shows how to use Android's new Design Library to make something like Lollipop's Dialer app.
 
+Here's a short [blogpost](http://www.jayrambhia.com/blog/contacts-demo/) about it.
+
 I have effectively used `CooridnatorLayout` for scroll and collapse effects. A shoutout to [cheesesquare](https://github.com/chrisbanes/cheesesquare)
 for putting up a demo which I used to get my head around the new design library.
 
