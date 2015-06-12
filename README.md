@@ -9,6 +9,8 @@ for putting up a demo which I used to get my head around the new design library.
 
 ![demo gif](https://raw.githubusercontent.com/jayrambhia/contactsdemo/master/images/demo1.gif)
 
+[Youtube Demo](https://www.youtube.com/watch?v=DlVTRMte4qU&feature=youtu.be)
+
 Pre-requisites
 --------------
 
