@@ -108,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@color/primary_color"
+            android:scrollbarSize="24sp"
             app:layout_scrollFlags="scroll"/>
 
         <android.support.v4.view.ViewPager

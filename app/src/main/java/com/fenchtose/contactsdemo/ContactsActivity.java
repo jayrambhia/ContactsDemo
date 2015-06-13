@@ -41,8 +41,15 @@ public class ContactsActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+
         if (mContactsFragment != null) {
-            getFragmentManager().putFragment(outState, CONTACTS_FRAGMENT_KEY, mContactsFragment);
+
+            /* Bug? -> https://code.google.com/p/android/issues/detail?id=77285 */
+            try {
+                getFragmentManager().putFragment(outState, CONTACTS_FRAGMENT_KEY, mContactsFragment);
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            }
         }
 
         if (mRecentDialFragment != null) {
